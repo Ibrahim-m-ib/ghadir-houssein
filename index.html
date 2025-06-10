@@ -3,23 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="مدرب كمال أجسام محترف - برامج تدريبية مخصصة لبناء العضلات واللياقة البدنية">
-    <title>محترف كمال الأجسام | مدرب شخصي معتمد</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>غدير حسين - مدرب كمال الأجسام</title>
     <style>
-        :root {
-            --primary: #FF5E14; /* برتقالي ناري */
-            --secondary: #1A1A2E; /* أزرق داكن */
-            --accent: #00E5FF; /* أزرق فاتح */
-            --dark: #0F0F1B;
-            --light: #F8F9FA;
-            --success: #28A745;
-            --warning: #FFC107;
-            --danger: #DC3545;
-            --text: #E2E2E2;
-            --text-secondary: #A0A0A0;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -27,2333 +12,671 @@
         }
 
         body {
-            font-family: 'Tajawal', 'Arial', sans-serif;
-            background-color: var(--dark);
-            color: var(--text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000000;
+            color: white;
+            min-height: 100vh;
             overflow-x: hidden;
-            line-height: 1.6;
         }
 
-        /* نظام الجسور المحسن */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Almarai', sans-serif;
-            font-weight: 800;
-            line-height: 1.3;
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #1a1a1a;
+            /* border-radius: 20px; */ /* Removed border radius */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            position: relative;
         }
 
-        /* تأثير الجسيمات المتحركة */
-        .floating-particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
+        .header {
+            background: #000000;
+            padding: 20px;
+            text-align: center;
+            position: relative;
             overflow: hidden;
         }
 
-        .particle {
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            border-radius: 50%;
-            animation: float 8s ease-in-out infinite;
-            opacity: 0.7;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
-            50% { transform: translateY(-40px) rotate(180deg) scale(1.2); }
-        }
-
-        /* الشريط العلوي المحسن */
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(15, 15, 35, 0.98);
-            backdrop-filter: blur(12px);
-            padding: 1rem 2rem;
-            z-index: 1000;
-            border-bottom: 2px solid rgba(255, 94, 20, 0.4);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .header.scrolled {
-            padding: 0.7rem 2rem;
-            background: rgba(10, 10, 25, 0.95);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo i {
-            font-size: 1.5rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-link {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            position: relative;
-            padding: 0.5rem 0;
-        }
-
-        .nav-link:hover {
-            color: var(--primary);
-        }
-
-        .nav-link::after {
+        .header::before {
             content: '';
             position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
+            top: 0;
             left: 0;
-            right: auto;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><radialGradient id="a" cx="50%" cy="40%" r="50%"><stop offset="0%" stop-color="white" stop-opacity="0.1"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient></defs><rect width="100" height="20" fill="url(%23a)"/></svg>');
+            animation: shimmer 3s ease-in-out infinite;
         }
 
-        .mobile-menu-btn {
-            display: none;
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+
+        .lang-toggle {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #333333;
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            /* border-radius: 20px; */ /* Removed border radius */
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-toggle:hover {
+            background: #555555;
+            transform: scale(1.05);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            left: 15px;
             background: none;
             border: none;
             color: white;
-            font-size: 1.5rem;
+            font-size: 24px;
             cursor: pointer;
+            transition: transform 0.3s ease;
         }
 
-        .language-switch {
-            background: linear-gradient(45deg, var(--primary), var(--accent));
+        .close-btn:hover {
+            transform: rotate(90deg);
+        }
+
+        .header h1 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .header p {
+            opacity: 0.8;
+            font-size: 14px;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .consultation-btn {
+            background: #4facfe;
             border: none;
-            padding: 0.5rem 1.2rem;
-            border-radius: 25px;
             color: white;
-            cursor: pointer;
+            padding: 15px 25px;
+            margin: 20px;
+            /* border-radius: 25px; */ /* Removed border radius */
+            font-size: 16px;
             font-weight: bold;
+            cursor: pointer;
+            width: calc(100% - 40px);
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 94, 20, 0.3);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .language-switch:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 94, 20, 0.5);
-        }
-
-        /* قسم البطل المحسن */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 6rem 2rem 2rem;
             position: relative;
-            z-index: 10;
             overflow: hidden;
         }
 
-        .hero::before {
+        .consultation-btn::before {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -50%;
+            top: 0;
+            left: -100%;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, rgba(255,94,20,0.15) 0%, rgba(0,0,0,0) 70%);
-            z-index: -1;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
         }
 
-        .hero-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+        .consultation-btn:hover::before {
+            left: 100%;
         }
 
-        .hero-text {
-            position: relative;
-            z-index: 10;
+        .consultation-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(79, 172, 254, 0.4);
+            background: #2196f3;
         }
 
-        .hero-text h1 {
-            font-size: 3.8rem;
-            font-weight: 900;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, var(--primary), var(--accent), #FFCD3C);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from { text-shadow: 0 0 10px rgba(255, 94, 20, 0.5); }
-            to { text-shadow: 0 0 20px rgba(255, 94, 20, 0.8); }
-        }
-
-        .hero-text p {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            line-height: 1.8;
-            opacity: 0.9;
-            max-width: 90%;
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 30px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.1rem;
-        }
-
-        .btn-primary {
-            background: linear-gradient(45deg, var(--primary), #FF8C42);
-            color: white;
-            box-shadow: 0 4px 20px rgba(255, 94, 20, 0.4);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 94, 20, 0.6);
-        }
-
-        .btn-outline {
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            background: transparent;
-        }
-
-        .btn-outline:hover {
-            background: rgba(255, 94, 20, 0.1);
-            transform: translateY(-3px);
-        }
-
-        .trainer-image {
-            position: relative;
+        .coach-section {
+            padding: 20px;
             text-align: center;
-            z-index: 5;
         }
 
-        .trainer-img {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            border-radius: 20px;
-            border: 5px solid rgba(255, 94, 20, 0.5);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            animation: float-img 6s ease-in-out infinite;
-            transform-style: preserve-3d;
-        }
-
-        @keyframes float-img {
-            0%, 100% { transform: translateY(0) rotateY(0deg); }
-            50% { transform: translateY(-20px) rotateY(5deg); }
-        }
-
-        .floating-badge {
-            position: absolute;
-            bottom: -20px;
-            left: -20px;
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            color: white;
-            padding: 1.5rem;
-            border-radius: 50%;
-            width: 120px;
-            height: 120px;
+        .coach-image {
+            width: 200px;
+            height: 250px;
+            /* border-radius: 20px; */ /* Removed border radius */
+            margin: 0 auto 20px;
+            background: #333333;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            z-index: 10;
+            font-size: 60px;
+            animation: float 3s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .coach-image::before {
+            
+            position: absolute;
             animation: pulse 2s ease-in-out infinite;
         }
 
-        .floating-badge .years {
-            font-size: 2.5rem;
-            line-height: 1;
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
 
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.1); }
         }
 
-        /* قسم البرامج المحسن */
+        .coach-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #4facfe;
+        }
+
+        .coach-title {
+            color: #4facfe;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .experience {
+            background: #333333;
+            padding: 15px;
+            /* border-radius: 15px; */ /* Removed border radius */
+            margin: 20px 0;
+            border: 1px solid #555555;
+        }
+
+        .experience-item {
+            margin: 8px 0;
+            font-size: 14px;
+            animation: slideInRight 0.8s ease;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
         .programs {
-            padding: 6rem 2rem;
-            background: linear-gradient(to bottom, var(--dark), #0A0A15);
-            position: relative;
+            padding: 20px;
         }
 
-        .programs::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="pattern" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,94,20,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23pattern)"/></svg>');
-            opacity: 0.3;
-            z-index: 1;
+        .program-item {
+            background: #333333;
+            margin: 15px 0;
+            padding: 20px;
+            /* border-radius: 15px; */ /* Removed border radius */
+            border-left: 4px solid #4facfe;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 4rem;
-            position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
+        .program-item:hover {
+            background: #444444;
+            transform: translateX(5px);
         }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(to right, transparent, var(--primary), transparent);
-            border-radius: 2px;
+        .program-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+            animation: bounce 2s ease-in-out infinite;
         }
 
-        .programs-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
         }
 
-        .programs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-        }
-
-        .program-card {
-            background: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(15, 15, 35, 0.9));
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 94, 20, 0.3);
-            backdrop-filter: blur(10px);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            z-index: 2;
-        }
-
-        .program-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 94, 20, 0.1), transparent);
-            transform: rotate(45deg);
-            transition: all 0.5s ease;
-            opacity: 0;
-        }
-
-        .program-card:hover::before {
-            opacity: 1;
-            animation: shimmer 1.5s ease-in-out;
-        }
-
-        .program-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(255, 94, 20, 0.3);
-            border-color: rgba(255, 94, 20, 0.6);
-        }
-
-        .program-card .popular-badge {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: var(--primary);
-            color: white;
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
+        .program-title {
             font-weight: bold;
-            box-shadow: 0 4px 15px rgba(255, 94, 20, 0.5);
+            margin-bottom: 5px;
+            font-size: 16px;
         }
 
-        .program-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            position: relative;
-            padding-bottom: 1rem;
-        }
-
-        .program-card h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--primary);
-            border-radius: 3px;
-        }
-
-        .program-card .price {
-            font-size: 2.5rem;
+        .program-price {
+            color: #4facfe;
             font-weight: bold;
-            color: var(--accent);
-            margin: 1.5rem 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            font-size: 18px;
         }
 
-        .program-card .price .period {
-            font-size: 1rem;
-            color: var(--text-secondary);
-        }
-
-        .program-card ul.features-list {
-            list-style: none;
-            margin: 2rem 0;
-        }
-
-        .program-card ul.features-list li {
-            margin-bottom: 1rem;
-            position: relative;
-            padding-right: 1.8rem;
-        }
-
-        .program-card ul.features-list li::before {
-            content: '✓';
-            position: absolute;
-            right: 0;
-            top: 0;
-            color: var(--primary);
-            font-weight: bold;
+        .program-description {
+            opacity: 0.8;
+            font-size: 14px;
+            margin-top: 5px;
         }
 
         .whatsapp-btn {
-            background: linear-gradient(45deg, #25D366, #128C7E);
-            color: white;
-            padding: 1rem 2rem;
+            background: #4facfe;
             border: none;
-            border-radius: 30px;
-            font-size: 1.1rem;
+            color: white;
+            padding: 15px 25px;
+            margin: 20px;
+            /* border-radius: 25px; */ /* Removed border radius */
+            font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
+            width: calc(100% - 40px);
             transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            margin-top: 1.5rem;
-            width: 100%;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            font-weight: bold;
         }
 
         .whatsapp-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(79, 172, 254, 0.4);
+            background: #2196f3;
         }
 
-        /* قسم المميزات المحسن */
-        .features {
-            padding: 6rem 2rem;
-            background: linear-gradient(to bottom, #0A0A15, var(--dark));
-            position: relative;
-        }
-
-        .features-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 3rem;
-        }
-
-        .feature-item {
-            padding: 2.5rem 2rem;
-            background: rgba(26, 26, 46, 0.7);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 94, 20, 0.2);
-            transition: all 0.4s ease;
+        .contact-info {
+            padding: 20px;
             text-align: center;
-            backdrop-filter: blur(5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            background: #333333;
         }
 
-        .feature-item:hover {
-            transform: translateY(-10px);
-            background: rgba(26, 26, 46, 0.9);
-            border-color: rgba(255, 94, 20, 0.5);
-            box-shadow: 0 15px 40px rgba(255, 94, 20, 0.2);
+        .contact-item {
+            margin: 10px 0;
+            animation: fadeIn 1s ease;
         }
 
-        .feature-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .contact-label {
+            color: #4facfe;
+            font-size: 14px;
+            margin-bottom: 5px;
         }
 
-        .feature-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-
-        .feature-item p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-        }
-
-        /* قسم الإحصائيات المحسن */
-        .stats-section {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, rgba(255, 94, 20, 0.1), rgba(0, 229, 255, 0.1));
-            border-top: 1px solid rgba(255, 94, 20, 0.3);
-            border-bottom: 1px solid rgba(255, 94, 20, 0.3);
-            position: relative;
-        }
-
-        .stats-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .stat-item {
-            padding: 2.5rem 2rem;
-            background: rgba(26, 26, 46, 0.7);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 94, 20, 0.3);
-            transition: all 0.4s ease;
-            backdrop-filter: blur(5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .stat-item:hover {
-            transform: translateY(-5px);
-            border-color: rgba(255, 94, 20, 0.6);
-            box-shadow: 0 15px 40px rgba(255, 94, 20, 0.2);
-        }
-
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 900;
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 1.3rem;
-            color: var(--text-secondary);
-            font-weight: 600;
-        }
-
-        /* قسم التعريف بالمدرب المحسن */
-        .trainer-intro {
-            padding: 6rem 2rem;
-            background: linear-gradient(to bottom, var(--dark), #0A0A15);
-            position: relative;
-        }
-
-        .intro-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 5rem;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .intro-image {
-            text-align: center;
-            position: relative;
-        }
-
-        .trainer-photo {
-            width: 100%;
-            max-width: 400px;
-            height: 500px;
-            border-radius: 20px;
-            overflow: hidden;
-            border: 5px solid rgba(255, 94, 20, 0.5);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            position: relative;
-        }
-
-        .trainer-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .trainer-photo:hover img {
-            transform: scale(1.05);
-        }
-
-        .certification-badge {
-            position: absolute;
-            bottom: -20px;
-            right: -20px;
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            color: white;
-            padding: 1rem;
-            border-radius: 15px;
-            width: 150px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            z-index: 10;
-        }
-
-        .certification-badge i {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .intro-content h2 {
-            font-size: 2.8rem;
-            margin-bottom: 2rem;
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            position: relative;
-            display: inline-block;
-        }
-
-        .intro-content h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(to right, var(--primary), transparent);
-            border-radius: 2px;
-        }
-
-        .intro-content p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            color: var(--text);
-        }
-
-        .achievements {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-
-        .achievement-item {
-            background: rgba(26, 26, 46, 0.7);
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid var(--primary);
-            transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
-        }
-
-        .achievement-item:hover {
-            background: rgba(26, 26, 46, 0.9);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .achievement-item strong {
-            display: block;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-
-        /* قسم معرض النتائج الجديد */
-        .results-gallery {
-            padding: 6rem 2rem;
-            background: linear-gradient(to bottom, #0A0A15, var(--dark));
-        }
-
-        .gallery-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            height: 350px;
-            transition: all 0.4s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(255, 94, 20, 0.3);
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 2rem;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            color: white;
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        /* قسم الجدول الزمني للتدريب الجديد */
-        .training-schedule {
-            padding: 6rem 2rem;
-            background: linear-gradient(to bottom, var(--dark), #0A0A15);
-        }
-
-        .schedule-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .schedule-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .schedule-tab {
-            padding: 0.8rem 2rem;
-            background: rgba(26, 26, 46, 0.7);
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 94, 20, 0.3);
-            font-weight: 600;
-        }
-
-        .schedule-tab.active {
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            color: white;
-            box-shadow: 0 4px 15px rgba(255, 94, 20, 0.5);
-        }
-
-        .schedule-tab:hover:not(.active) {
-            background: rgba(26, 26, 46, 0.9);
-        }
-
-        .schedule-content {
-            display: none;
-        }
-
-        .schedule-content.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
+        .contact-value {
+            font-size: 16px;
+            font-weight: bold;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: rgba(26, 26, 46, 0.7);
-            border-radius: 15px;
-            overflow: hidden;
-            backdrop-filter: blur(5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .schedule-table th {
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            color: white;
-            padding: 1.5rem;
-            text-align: right;
-        }
-
-        .schedule-table td {
-            padding: 1.2rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: right;
-        }
-
-        .schedule-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .schedule-table tr:hover td {
-            background: rgba(255, 94, 20, 0.1);
-        }
-
-        .exercise {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .exercise-icon {
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 94, 20, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-        }
-
-        /* قسم تقييمات العملاء الجديد */
-        .testimonials {
-            padding: 6rem 2rem;
-            background: linear-gradient(to bottom, #0A0A15, var(--dark));
-        }
-
-        .testimonials-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .testimonials-slider {
-            margin-top: 3rem;
-            position: relative;
-        }
-
-        .testimonial-card {
-            background: rgba(26, 26, 46, 0.8);
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 94, 20, 0.3);
-            margin: 1rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(255, 94, 20, 0.2);
-        }
-
-        .client-info {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .client-avatar {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 3px solid var(--primary);
-        }
-
-        .client-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .client-name {
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin-bottom: 0.3rem;
-        }
-
-        .client-title {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .rating {
-            color: var(--warning);
-            margin-bottom: 1rem;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            position: relative;
-            padding-right: 2rem;
-        }
-
-        .testimonial-text::before {
-            content: '"';
-            position: absolute;
-            top: -20px;
-            right: 0;
-            font-size: 4rem;
-            color: rgba(255, 94, 20, 0.2);
-            font-family: serif;
-            line-height: 1;
-        }
-
-        /* قسم الاتصال المحسن */
-        .contact {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, var(--secondary), #000000);
+        .footer {
             text-align: center;
-            position: relative;
+            padding: 20px;
+            font-size: 12px;
+            opacity: 0.6;
+            background: #000000;
         }
 
-        .contact::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="pattern" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,94,20,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23pattern)"/></svg>');
-            opacity: 0.2;
-            z-index: 1;
+        .hidden {
+            display: none;
         }
 
-        .contact-container {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
+        [dir="ltr"] .container {
+            direction: ltr;
         }
 
-        .contact h2 {
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        [dir="ltr"] .lang-toggle {
+            right: auto;
+            left: 15px;
         }
 
-        .contact p {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+        [dir="ltr"] .close-btn {
+            left: auto;
+            right: 15px;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin: 3rem 0;
-            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
         }
 
-        .social-btn {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
+        .social-link {
+            width: 50px;
+            height: 50px;
+            /* border-radius: 50%; */ /* Removed border radius */
+            background: #4facfe;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            font-size: 2rem;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
             color: white;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        .social-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            transition: all 0.4s ease;
-            z-index: -1;
-        }
-
-        .instagram-btn {
-            background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
-        }
-
-        .instagram-btn:hover {
-            transform: translateY(-10px) scale(1.1);
-            box-shadow: 0 15px 35px rgba(131, 58, 180, 0.6);
-        }
-
-        .facebook-btn {
-            background: linear-gradient(45deg, #1877f2, #42a5f5);
-        }
-
-        .facebook-btn:hover {
-            transform: translateY(-10px) scale(1.1);
-            box-shadow: 0 15px 35px rgba(24, 119, 242, 0.6);
-        }
-
-        .youtube-btn {
-            background: linear-gradient(45deg, #ff0000, #ff5e5e);
-        }
-
-        .youtube-btn:hover {
-            transform: translateY(-10px) scale(1.1);
-            box-shadow: 0 15px 35px rgba(255, 0, 0, 0.6);
-        }
-
-        .tiktok-btn {
-            background: linear-gradient(45deg, #000000, #25F4EE, #FE2C55);
-        }
-
-        .tiktok-btn:hover {
-            transform: translateY(-10px) scale(1.1);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-        }
-
-        .contact-form {
-            background: rgba(26, 26, 46, 0.8);
-            padding: 3rem;
-            border-radius: 20px;
-            margin-top: 3rem;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            text-align: right;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 1rem;
-            background: rgba(15, 15, 35, 0.7);
-            border: 1px solid rgba(255, 94, 20, 0.3);
-            border-radius: 10px;
-            color: white;
-            font-size: 1rem;
+            font-size: 20px;
             transition: all 0.3s ease;
         }
 
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(255, 94, 20, 0.2);
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            color: white;
-            border: none;
-            padding: 1rem 2.5rem;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 4px 15px rgba(255, 94, 20, 0.4);
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 94, 20, 0.6);
-        }
-
-        /* التذييل المحسن */
-        .footer {
-            background: linear-gradient(to bottom, #0A0A15, #000000);
-            padding: 4rem 2rem 2rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .footer-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            text-align: right;
-        }
-
-        .footer-logo {
-            font-size: 2rem;
-            font-weight: 900;
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-        }
-
-        .footer-about p {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-links h3, .footer-contact h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            position: relative;
-            display: inline-block;
-        }
-
-        .footer-links h3::after, .footer-contact h3::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            right: 0;
-            width: 50%;
-            height: 3px;
-            background: var(--primary);
-            border-radius: 3px;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary);
-            transform: translateX(-5px);
-        }
-
-        .contact-info {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-            justify-content: flex-end;
-        }
-
-        .contact-info i {
-            color: var(--primary);
-            font-size: 1.2rem;
-        }
-
-        .copyright {
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        /* تأثيرات التمرير */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* القوائم المنسدلة للهاتف المحمول */
-        .mobile-menu {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 80%;
-            max-width: 350px;
-            height: 100vh;
-            background: var(--secondary);
-            z-index: 2000;
-            transition: all 0.4s ease;
-            padding: 2rem;
-            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
-            overflow-y: auto;
-        }
-
-        .mobile-menu.active {
-            right: 0;
-        }
-
-        .mobile-menu-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 3rem;
-        }
-
-        .close-menu {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        .mobile-nav-links {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .mobile-nav-link {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .mobile-nav-link:hover {
-            color: var(--primary);
-            padding-right: 10px;
-        }
-
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 1500;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.4s ease;
-        }
-
-        .overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* استجابة للهاتف المحمول */
-        @media (max-width: 992px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 3rem;
-                padding-top:3rem;
-            }
-            
-            .hero-text h1 {
-                font-size: 2.8rem;
-            }
-            
-            .hero-text p {
-                max-width: 100%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            
-            .hero-btns {
-                justify-content: center;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .intro-container {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-                text-align: center;
-            }
-            
-            .trainer-photo {
-                margin: 0 auto;
-            }
-            
-            .certification-badge {
-                right: 50%;
-                transform: translateX(50%);
-            }
-            
-            .intro-content h2::after {
-                right: 50%;
-                transform: translateX(50%);
-                width: 50%;
-            }
-            
-            .section-title {
-                font-size: 2.3rem;
-                padding-left: 6rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-text h1 {
-                font-size: 2.3rem;
-            }
-            
-            .hero-text p {
-                font-size: 1.1rem;
-            }
-            
-            .btn {
-                padding: 0.8rem 1.5rem;
-                font-size: 1rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-                padding-left: 8.5rem;
-            }
-            
-            .program-card, .feature-item, .stat-item {
-                padding: 1.5rem;
-            }
-            
-            .contact-form {
-                padding: 2rem 1.5rem;
-            }
-            
-            .footer-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .footer-links h3::after, .footer-contact h3::after {
-                right: 50%;
-                transform: translateX(50%);
-            }
-            
-            .footer-links ul {
-                text-align: center;
-            }
-            
-            .contact-info {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-            
-            .hero-btns {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .programs-grid, .features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .social-links {
-                gap: 1rem;
-            }
-            
-            .social-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
-            }
+        .social-link:hover {
+            transform: scale(1.1) rotate(10deg);
+            background: #2196f3;
         }
     </style>
 </head>
 <body>
-    <div class="floating-particles" id="particles"></div>
-    
-    <header class="header" id="header">
-        <div class="nav-container">
-            <div class="logo" data-ar="💪 مدرب كمال الأجسام" data-en="💪 Bodybuilding Trainer">
-                <i class="fas fa-dumbbell"></i> مدرب كمال الأجسام
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <button class="close-btn" onclick="window.close()">×</button>
+            <button class="lang-toggle" onclick="toggleLanguage()">
+                <span class="ar-text">EN</span>
+                <span class="en-text hidden">AR</span>
+            </button>
+            <h1>
+                <span class="ar-text">احصل على استشارة مجانية</span>
+                <span class="en-text hidden">GET FREE CONSULTATION</span>
+            </h1>
+            <p>
+                <span class="ar-text">Instagram</span>
+                <span class="en-text hidden">Instagram</span>
+            </p>
+        </div>
+
+        <!-- Consultation Button -->
+        <button class="consultation-btn" onclick="openWhatsApp('consultation')">
+            <span class="ar-text">لنبدأ! تواصل معي عبر الواتساب</span>
+            <span class="en-text hidden">Let's get started! WhatsApp me</span>
+        </button>
+
+        <!-- Coach Section -->
+        <div class="coach-section">
+            <div class="coach-image">
+                <img src="g1.jpeg" alt="Coach Ghadir Hussein" style="width:100%;height:100%;object-fit:cover;border-radius:20px;">
+            </div></div>
+            <h2 class="coach-name">
+                <span class="ar-text">المدرب غدير حسين</span>
+                <span class="en-text hidden">COACH Ghadir Hussein</span>
+            </h2>
+            <p class="coach-title">
+                <span class="ar-text">مدرب كمال الأجسام</span>
+                <span class="en-text hidden">Fitness Coach</span>
+            </p>
+            
+            <div class="experience">
+                <div class="experience-item">
+                    <span class="ar-text">8 سنة من الخبرة</span>
+                    <span class="en-text hidden">8 years of experience</span>
+                </div>
+                <div class="experience-item">
+                    <span class="ar-text">أكثر من 200 عميل تم تحويلهم</span>
+                    <span class="en-text hidden">200+ clients transformation</span>
+                </div>
             </div>
-            
-            <nav class="nav-links">
-                <a href="#home" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-                <a href="#programs" class="nav-link" data-ar="البرامج" data-en="Programs">البرامج</a>
-                <a href="#about" class="nav-link" data-ar="عن المدرب" data-en="About">عن المدرب</a>
-                <a href="#results" class="nav-link" data-ar="النتائج" data-en="Results">النتائج</a>
-                <a href="#contact" class="nav-link" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
-            </nav>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <button class="language-switch" onclick="switchLanguage()" data-ar="English" data-en="العربية">
-                <i class="fas fa-globe"></i> <span>English</span>
-            </button>
         </div>
-    </header>
-    
-    <!-- القائمة المنسدلة للهاتف المحمول -->
-    <div class="overlay" id="overlay"></div>
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-header">
-            <div class="logo" data-ar="💪 مدرب كمال الأجسام" data-en="💪 Bodybuilding Trainer">💪 مدرب كمال الأجسام</div>
-            <button class="close-menu" id="closeMenu"><i class="fas fa-times"></i></button>
+
+        <!-- Programs Section -->
+        <div class="programs">
+            <h3 style="text-align: center; margin-bottom: 20px; color: #4facfe;">
+                <span class="ar-text">ابدأ رحلة التحول الخاصة بك</span>
+                <span class="en-text hidden">START YOUR FITNESS TRANSFORMATION</span>
+            </h3>
+
+            <!-- Free Program -->
+            <div class="program-item" onclick="openWhatsApp('free')">
+                <div class="program-icon">🆓</div>
+                <div class="program-title">
+                    <span class="ar-text">برنامج مجاني</span>
+                    <span class="en-text hidden">FREE PROGRAM</span>
+                </div>
+                <div class="program-price">
+                    <span class="ar-text">مجاناً</span>
+                    <span class="en-text hidden">FREE</span>
+                </div>
+                <div class="program-description">
+                    <span class="ar-text">برنامج تدريب أساسي مع نصائح التغذية</span>
+                    <span class="en-text hidden">Basic training program with nutrition tips</span>
+                </div>
+            </div>
+
+            <!-- Training Program -->
+            <div class="program-item" onclick="openWhatsApp('program')">
+                <div class="program-icon">🏋️</div>
+                <div class="program-title">
+                    <span class="ar-text">برنامج التدريب (4 أسابيع)</span>
+                    <span class="en-text hidden">TRAINING PROGRAM (4-WEEK)</span>
+                </div>
+                <div class="program-price">$105/
+                    <span class="ar-text">شهر</span>
+                    <span class="en-text hidden">MON</span>
+                </div>
+                <div class="program-description">
+                    <span class="ar-text">بناء العضلات | فقدان الدهون | التنسيق</span>
+                    <span class="en-text hidden">Build muscle | Lose Fat | Get Toned</span>
+                </div>
+            </div>
+
+            <!-- Custom Nutrition -->
+            <div class="program-item" onclick="openWhatsApp('nutrition')">
+                <div class="program-icon">🍎</div>
+                <div class="program-title">
+                    <span class="ar-text">خطة التغذية المخصصة</span>
+                    <span class="en-text hidden">CUSTOM NUTRITION PLAN</span>
+                </div>
+                <div class="program-price">$75</div>
+                <div class="program-description">
+                    <span class="ar-text">خطة غذائية مصممة خصيصاً لأهدافك</span>
+                    <span class="en-text hidden">Personalized meal plan for your goals</span>
+                </div>
+            </div>
+
+            <!-- Private Training -->
+            <div class="program-item" onclick="openWhatsApp('private')">
+                <div class="program-icon">👨‍💼</div>
+                <div class="program-title">
+                    <span class="ar-text">التدريب الشخصي (خاص)</span>
+                    <span class="en-text hidden">PERSONALIZED TRAINING (PRIVATE)</span>
+                </div>
+                <div class="program-price">$275/
+                    <span class="ar-text">شهر</span>
+                    <span class="en-text hidden">MON</span>
+                </div>
+                <div class="program-description">
+                    <span class="ar-text">تدريب فردي مع متابعة يومية</span>
+                    <span class="en-text hidden">One-on-one training with daily follow-up</span>
+                </div>
+            </div>
         </div>
-        
-        <nav class="mobile-nav-links">
-            <a href="#home" class="mobile-nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-            <a href="#programs" class="mobile-nav-link" data-ar="البرامج" data-en="Programs">البرامج</a>
-            <a href="#about" class="mobile-nav-link" data-ar="عن المدرب" data-en="About">عن المدرب</a>
-            <a href="#results" class="mobile-nav-link" data-ar="النتائج" data-en="Results">النتائج</a>
-            <a href="#contact" class="mobile-nav-link" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
-        </nav>
+
+        <!-- WhatsApp Button -->
+        <button class="whatsapp-btn" onclick="openWhatsApp('general')">
+            📱
+            <span class="ar-text">ابدأ رحلتك معي - رسالة واتساب مع أهدافك</span>
+            <span class="en-text hidden">Start your journey with me - WhatsApp message with your goals</span>
+        </button>
+
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="#" class="social-link">📷</a>
+            <a href="tel:+96170504588" class="social-link">📞</a>
+            <a href="#" class="social-link">✉️</a>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <h3 style="color: #4facfe; margin-bottom: 15px;">
+                <span class="ar-text">معلومات التواصل</span>
+                <span class="en-text hidden">CONTACTS</span>
+            </h3>
+            <div class="contact-item">
+                <div class="contact-label">
+                    <span class="ar-text">المدرب</span>
+                    <span class="en-text hidden">Coach</span>
+                </div>
+                <div class="contact-value">
+                    <span class="ar-text">غدير حسين</span>
+                    <span class="en-text hidden">GHADIR HUSSEIN</span>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-label">
+                    <span class="ar-text">الهاتف</span>
+                    <span class="en-text hidden">Phone</span>
+                </div>
+                <div class="contact-value">+961 3 241 422</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <span class="ar-text">مدعوم بواسطة Ibrahim Ibrahim</span>
+            <span class="en-text hidden">Powered by Ibrahim Ibrahim</span>
+        </div>
     </div>
 
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 data-ar="حقق أحلامك الجسدية مع مدربك الشخصي" data-en="Achieve Your Body Goals With Personal Trainer">حقق أحلامك الجسدية مع مدربك الشخصي</h1>
-                <p data-ar="برامج تدريبية مخصصة لبناء العضلات، فقدان الدهون، والوصول إلى القمة الجسدية. خبرة أكثر من 8 سنوات في تحويل الأجسام وإبراز أفضل نسخة منك." data-en="Custom training programs for muscle building, fat loss, and reaching peak physical condition. Over 8 years of experience in body transformation and bringing out the best version of you.">برامج تدريبية مخصصة لبناء العضلات، فقدان الدهون، والوصول إلى القمة الجسدية. خبرة أكثر من 8 سنوات في تحويل الأجسام وإبراز أفضل نسخة منك.</p>
-                
-                <div class="hero-btns">
-                    <a href="#programs" class="btn btn-primary" data-ar="اكتشف البرامج" data-en="Discover Programs">اكتشف البرامج</a>
-                    <a href="#contact" class="btn btn-outline" data-ar="تواصل معي" data-en="Contact Me">تواصل معي</a>
-                </div>
-            </div>
-            <div class="trainer-image">
-                <img src="g3.jpeg" alt="مدرب كمال الأجسام" class="trainer-img">
-                <div class="floating-badge">
-                    <div class="years">8+</div>
-                    <div data-ar="سنوات خبرة" data-en="Years Experience">سنوات خبرة</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="programs" id="programs">
-        <div class="programs-container">
-            <h2 class="section-title" data-ar="برامج التدريب المميزة" data-en="Premium Training Programs">برامج التدريب المميزة</h2>
-            <div class="programs-grid">
-                <div class="program-card fade-in">
-                    <div class="popular-badge" data-ar="الأكثر طلباً" data-en="Most Popular">الأكثر طلباً</div>
-                    <h3 data-ar="البرنامج المتميز" data-en="Premium Program">البرنامج المتميز</h3>
-                    <div class="price">
-                        <span data-ar="80" data-en="80">80</span> 
-                        <span class="currency" data-ar="$" data-en="$">$</span>
-                        <span class="period" data-ar="/شهر" data-en="/month">/شهر</span>
-                    </div>
-                    <ul class="features-list" data-ar="
-                        <li>برنامج تدريبي شخصي 100%</li>
-                        <li>نظام غذائي مخصص</li>
-                        <li>متابعة يومية عبر الواتساب</li>
-                        <li>تعديلات أسبوعية حسب التقدم</li>
-                        <li>تحليل شامل للجسم</li>
-                        <li>دعم مستمر 24/7</li>
-                        <li>نصائح للمكملات الغذائية</li>
-                        <li>فيديوهات توضيحية للتمارين</li>
-                    " data-en="
-                        <li>100% Personalized training program</li>
-                        <li>Custom nutrition plan</li>
-                        <li>Daily WhatsApp follow-up</li>
-                        <li>Weekly adjustments based on progress</li>
-                        <li>Comprehensive body analysis</li>
-                        <li>24/7 continuous support</li>
-                        <li>Supplementation advice</li>
-                        <li>Exercise demonstration videos</li>
-                    ">
-                        <li>برنامج تدريبي شخصي 100%</li>
-                        <li>نظام غذائي مخصص</li>
-                        <li>متابعة يومية عبر الواتساب</li>
-                        <li>تعديلات أسبوعية حسب التقدم</li>
-                        <li>تحليل شامل للجسم</li>
-                        <li>دعم مستمر 24/7</li>
-                        <li>نصائح للمكملات الغذائية</li>
-                        <li>فيديوهات توضيحية للتمارين</li>
-                    </ul>
-                   <a href="https://wa.me/9613241422?text=أريد الاشتراك في البرنامج المتميز" class="whatsapp-btn" style="pointer-events:auto; position:relative; z-index:2;">
-                        <i class="fab fa-whatsapp"></i> <span data-ar="اشترك الآن" data-en="Subscribe Now">اشترك الآن</span>
-                    </a>
-                </div>
-                
-                <div class="program-card fade-in">
-                    <h3 data-ar="برنامج بناء العضلات" data-en="Muscle Building Program">برنامج بناء العضلات</h3>
-                    <div class="price">
-                        <span data-ar="60" data-en="60">60</span> 
-                        <span class="currency" data-ar="$" data-en="SAR">$</span>
-                        <span class="period" data-ar="/شهر" data-en="/month">/شهر</span>
-                    </div>
-                    <ul class="features-list" data-ar="
-                        <li>برنامج تدريبي لزيادة الكتلة العضلية</li>
-                        <li>نظام غذائي عالي البروتين</li>
-                        <li>متابعة أسبوعية عبر الواتساب</li>
-                        <li>تعديلات كل أسبوعين</li>
-                        <li>تحليل تقدم أسبوعي</li>
-                        <li>دعم مستمر</li>
-                        <li>نصائح للمكملات الغذائية</li>
-                        <li>فيديوهات توضيحية للتمارين</li>
-                    " data-en="
-                        <li>Training program for muscle mass gain</li>
-                        <li>High protein nutrition plan</li>
-                        <li>Weekly WhatsApp follow-up</li>
-                        <li>Bi-weekly adjustments</li>
-                        <li>Weekly progress analysis</li>
-                        <li>Continuous support</li>
-                        <li>Supplementation advice</li>
-                        <li>Exercise demonstration videos</li>
-                    ">
-                        <li>برنامج تدريبي لزيادة الكتلة العضلية</li>
-                        <li>نظام غذائي عالي البروتين</li>
-                        <li>متابعة أسبوعية عبر الواتساب</li>
-                        <li>تعديلات كل أسبوعين</li>
-                        <li>تحليل تقدم أسبوعي</li>
-                        <li>دعم مستمر</li>
-                        <li>نصائح للمكملات الغذائية</li>
-                        <li>فيديوهات توضيحية للتمارين</li>
-                    </ul>
-                    <a href="https://wa.me/9613241422?text=أريد الاشتراك في برنامج العضلات" class="whatsapp-btn" style="pointer-events:auto; position:relative; z-index:2;">
-                        <i class="fab fa-whatsapp"></i> <span data-ar="اشترك الآن" data-en="Subscribe Now">اشترك الآن</span>
-                    </a>
-                </div>
-                
-                <div class="program-card fade-in">
-                    <h3 data-ar="برنامج التخسيس" data-en="Fat Loss Program">برنامج التخسيس</h3>
-                    <div class="price">
-                        <span data-ar="60" data-en="60">60</span> 
-                        <span class="currency" data-ar="$" data-en="$">$</span>
-                        <span class="period" data-ar="/شهر" data-en="/month">/شهر</span>
-                    </div>
-                    <ul class="features-list" data-ar="
-                        <li>برنامج تدريبي لحرق الدهون</li>
-                        <li>نظام غذائي منخفض السعرات</li>
-                        <li>متابعة أسبوعية عبر الواتساب</li>
-                        <li>تعديلات كل أسبوعين</li>
-                        <li>تحليل تقدم أسبوعي</li>
-                        <li>دعم مستمر</li>
-                        <li>نصائح للمكملات الغذائية</li>
-                        <li>فيديوهات تمارين الكارديو</li>
-                    " data-en="
-                        <li>Training program for fat burning</li>
-                        <li>Low calorie nutrition plan</li>
-                        <li>Weekly WhatsApp follow-up</li>
-                        <li>Bi-weekly adjustments</li>
-                        <li>Weekly progress analysis</li>
-                        <li>Continuous support</li>
-                        <li>Supplementation advice</li>
-                        <li>Cardio exercise videos</li>
-                    ">
-                        <li>برنامج تدريبي لحرق الدهون</li>
-                        <li>نظام غذائي منخفض السعرات</li>
-                        <li>متابعة أسبوعية عبر الواتساب</li>
-                        <li>تعديلات كل أسبوعين</li>
-                        <li>تحليل تقدم أسبوعي</li>
-                        <li>دعم مستمر</li>
-                        <li>نصائح للمكملات الغذائية</li>
-                        <li>فيديوهات تمارين الكارديو</li>
-                    </ul>
-                    <a href="https://wa.me/9613241422?text=أريد الاشتراك في برنامج التخسيس" class="whatsapp-btn" style="pointer-events:auto; position:relative; z-index:2;">
-                        <i class="fab fa-whatsapp"></i> <span data-ar="اشترك الآن" data-en="Subscribe Now">اشترك الآن</span>
-                    </a>
-                </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="features">
-        <div class="features-container">
-            <h2 class="section-title" data-ar="لماذا تختار مدربك الشخصي؟" data-en="Why Choose Your Personal Trainer?">لماذا تختار مدربك الشخصي؟</h2>
-            <div class="features-grid">
-                <div class="feature-item fade-in">
-                    <div class="feature-icon"><i class="fas fa-trophy"></i></div>
-                    <h3 data-ar="خبرة واحترافية" data-en="Experience & Professionalism">خبرة واحترافية</h3>
-                    <p data-ar="أكثر من 8 سنوات في مجال التدريب الرياضي وبناء الأجسام مع شهادات دولية معتمدة" data-en="Over 8 years in sports training and bodybuilding with internationally certified certificates">أكثر من 8 سنوات في مجال التدريب الرياضي وبناء الأجسام مع شهادات دولية معتمدة</p>
-                </div>
-                <div class="feature-item fade-in">
-                    <div class="feature-icon"><i class="fas fa-dumbbell"></i></div>
-                    <h3 data-ar="برامج مخصصة" data-en="Customized Programs">برامج مخصصة</h3>
-                    <p data-ar="تصميم برامج تدريبية وتغذوية خاصة بكل متدرب حسب أهدافه وقدراته الجسدية" data-en="Designing training and nutrition programs specific to each trainee according to their goals and physical abilities">تصميم برامج تدريبية وتغذوية خاصة بكل متدرب حسب أهدافه وقدراته الجسدية</p>
-                </div>
-                <div class="feature-item fade-in">
-                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3 data-ar="نتائج مضمونة" data-en="Guaranteed Results">نتائج مضمونة</h3>
-                    <p data-ar="95% من المتدربين يحققون نتائج ممتازة خلال أول 3 أشهر من التدريب" data-en="95% of trainees achieve excellent results within the first 3 months of training">95% من المتدربين يحققون نتائج ممتازة خلال أول 3 أشهر من التدريب</p>
-                </div>
-                <div class="feature-item fade-in">
-                    <div class="feature-icon"><i class="fas fa-phone-alt"></i></div>
-                    <h3 data-ar="دعم مستمر" data-en="Continuous Support">دعم مستمر</h3>
-                    <p data-ar="متابعة يومية وحل جميع المشكلات التي تواجهك خلال رحلتك التدريبية" data-en="Daily follow-up and solving all problems you face during your training journey">متابعة يومية وحل جميع المشكلات التي تواجهك خلال رحلتك التدريبية</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="stats-section">
-        <div class="stats-container">
-            <div class="stat-item fade-in">
-                <div class="stat-number" data-ar="500+" data-en="500+">500+</div>
-                <div class="stat-label" data-ar="متدرب راضٍ" data-en="Satisfied Trainees">متدرب راضٍ</div>
-            </div>
-            <div class="stat-item fade-in">
-                <div class="stat-number" data-ar="95%" data-en="95%">95%</div>
-                <div class="stat-label" data-ar="نسبة النجاح" data-en="Success Rate">نسبة النجاح</div>
-            </div>
-            <div class="stat-item fade-in">
-                <div class="stat-number" data-ar="8+" data-en="8+">8+</div>
-                <div class="stat-label" data-ar="سنوات خبرة" data-en="Years Experience">سنوات خبرة</div>
-            </div>
-            <div class="stat-item fade-in">
-                <div class="stat-number" data-ar="24/7" data-en="24/7">24/7</div>
-                <div class="stat-label" data-ar="دعم فني" data-en="Support">دعم فني</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="trainer-intro" id="about">
-        <div class="intro-container">
-            <div class="intro-image">
-                <div class="trainer-photo">
-                    <img src="g1.jpeg" alt="المدرب المحترف">
-                </div>
-                <div class="certification-badge">
-                    <i class="fas fa-award"></i>
-                    <div data-ar="مدرب معتمد" data-en="Certified Trainer">مدرب معتمد</div>
-                </div>
-            </div>
-            <div class="intro-content">
-                <h2 data-ar="تعرف على مدربك الشخصي" data-en="Meet Your Personal Trainer">تعرف على مدربك الشخصي</h2>
-                <p data-ar="أنا غدير الحسين، مدرب كمال أجسام محترف وحاصل على شهادات دولية في التدريب الرياضي والتغذية. بدأت رحلتي في عالم كمال الأجسام منذ أكثر من 8 سنوات، وخلال السنوات الماضية ساعدت المئات من الأشخاص في تحقيق أهدافهم الجسدية." data-en="I'm ghadir al hussein, a professional bodybuilding trainer with international certifications in sports training and nutrition. I started my journey in the world of bodybuilding more than 8 years ago, and over the past years I have helped hundreds of people achieve their physical goals.">أنا غدير الحسين، مدرب كمال أجسام محترف وحاصل على شهادات دولية في التدريب الرياضي والتغذية. بدأت رحلتي في عالم كمال الأجسام منذ أكثر من 8 سنوات، وخلال السنوات الماضية ساعدت المئات من الأشخاص في تحقيق أهدافهم الجسدية.</p>
-                <p data-ar="تخصصي في تحليل الجسم وتصميم البرامج التدريبية والتغذوية التي تناسب كل فرد حسب حالته الجسدية وأهدافه. أؤمن بأن كل جسم مختلف ويحتاج إلى خطة مخصصة لتحقيق أفضل النتائج." data-en="My specialty is body analysis and designing training and nutrition programs that suit each individual according to their physical condition and goals. I believe that every body is different and needs a customized plan to achieve the best results.">تخصصي في تحليل الجسم وتصميم البرامج التدريبية والتغذوية التي تناسب كل فرد حسب حالته الجسدية وأهدافه. أؤمن بأن كل جسم مختلف ويحتاج إلى خطة مخصصة لتحقيق أفضل النتائج.</p>
-                
-                <div class="achievements">
-                    <div class="achievement-item">
-                        <strong data-ar="شهادات معتمدة" data-en="Certifications">شهادات معتمدة</strong>
-                        <p data-ar="حاصل على شهادات من ACSM و NASM" data-en="Certified by ACSM and NASM">حاصل على شهادات من ACSM و NASM</p>
-                    </div>
-                    <div class="achievement-item">
-                        <strong data-ar="خبير تغذية" data-en="Nutrition Expert">خبير تغذية</strong>
-                        <p data-ar="متخصص في التغذية الرياضية" data-en="Sports nutrition specialist">متخصص في التغذية الرياضية</p>
-                    </div>
-                    <div class="achievement-item">
-                        <strong data-ar="بطولات" data-en="Championships">بطولات</strong>
-                        <p data-ar="حاصل على عدة بطولات محلية" data-en="Winner of several local championships">حاصل على عدة بطولات محلية</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="results-gallery" id="results">
-        <div class="gallery-container">
-            <h2 class="section-title" data-ar="معرض النتائج" data-en="Results Gallery">معرض النتائج</h2>
-            <p class="section-subtitle" data-ar="شاهد تحولات متدربينا قبل وبعد" data-en="See our trainees' before and after transformations" style="text-align: center; color: var(--text-secondary); max-width: 800px; margin: 0 auto 3rem;">شاهد تحولات متدربينا قبل وبعد</p>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item fade-in">
-                    <img src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="نتيجة متدرب">
-                    <div class="gallery-overlay">
-                        <h3 data-ar="أحمد - 6 أشهر" data-en="Ahmed - 6 Months">أحمد - 6 أشهر</h3>
-                        <p data-ar="زيادة 8 كجم كتلة عضلية" data-en="+8kg Muscle Mass">زيادة 8 كجم كتلة عضلية</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item fade-in">
-                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="نتيجة متدرب">
-                    <div class="gallery-overlay">
-                        <h3 data-ar="خالد - 4 أشهر" data-en="Khaled - 4 Months">خالد - 4 أشهر</h3>
-                        <p data-ar="فقد 12 كجم دهون" data-en="-12kg Fat Loss">فقد 12 كجم دهون</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item fade-in">
-                    <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="نتيجة متدرب">
-                    <div class="gallery-overlay">
-                        <h3 data-ar="سامي - 8 أشهر" data-en="Sami - 8 Months">سامي - 8 أشهر</h3>
-                        <p data-ar="تحول كامل للجسم" data-en="Complete Body Transformation">تحول كامل للجسم</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="training-schedule">
-        <div class="schedule-container">
-            <h2 class="section-title" data-ar="نماذج من البرامج التدريبية" data-en="Training Program Samples">نماذج من البرامج التدريبية</h2>
-            <p class="section-subtitle" data-ar="اختر نوع البرنامج لمشاهدة جدول تدريبي نموذجي" data-en="Select program type to view a sample training schedule" style="text-align: center; color: var(--text-secondary); max-width: 800px; margin: 0 auto 3rem;">اختر نوع البرنامج لمشاهدة جدول تدريبي نموذجي</p>
-            
-            <div class="schedule-tabs">
-                <div class="schedule-tab active" data-target="building" data-ar="بناء العضلات" data-en="Muscle Building">بناء العضلات</div>
-                <div class="schedule-tab" data-target="fatloss" data-ar="فقدان الدهون" data-en="Fat Loss">فقدان الدهون</div>
-                <div class="schedule-tab" data-target="fitness" data-ar="اللياقة العامة" data-en="General Fitness">اللياقة العامة</div>
-            </div>
-            
-            <div class="schedule-content active" id="building">
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th data-ar="اليوم" data-en="Day">اليوم</th>
-                            <th data-ar="مجموعات العضلات" data-en="Muscle Groups">مجموعات العضلات</th>
-                            <th data-ar="التمارين" data-en="Exercises">التمارين</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-ar="الاثنين" data-en="Monday">الاثنين</td>
-                            <td data-ar="الصدر، الترايسبس" data-en="Chest, Triceps">الصدر، الترايسبس</td>
-                            <td>
-                                <div class="exercise">
-                                    <div class="exercise-icon"><i class="fas fa-dumbbell"></i></div>
-                                    <div data-ar="بنش برس، إنكلين دمبل، كابل فلاي، ترايسبس كيكباك" data-en="Bench press, Incline dumbbell, Cable fly, Triceps kickback">بنش برس، إنكلين دمبل، كابل فلاي، ترايسبس كيكباك</div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td data-ar="الثلاثاء" data-en="Tuesday">الثلاثاء</td>
-                            <td data-ar="الظهر، البايسبس" data-en="Back, Biceps">الظهر، البايسبس</td>
-                            <td>
-                                <div class="exercise">
-                                    <div class="exercise-icon"><i class="fas fa-dumbbell"></i></div>
-                                    <div data-ar="لت بلل، باربل رو، سيدد رو، دمبل كيرل" data-en="Lat pull, Barbell row, Seated row, Dumbbell curl">لت بلل، باربل رو، سيدد رو، دمبل كيرل</div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td data-ar="الأربعاء" data-en="Wednesday">الأربعاء</td>
-                            <td data-ar="الراحة" data-en="Rest">الراحة</td>
-                            <td data-ar="تمارين إطالة" data-en="Stretching">تمارين إطالة</td>
-                        </tr>
-                        <tr>
-                            <td data-ar="الخميس" data-en="Thursday">الخميس</td>
-                            <td data-ar="الأرجل" data-en="Legs">الأرجل</td>
-                            <td>
-                                <div class="exercise">
-                                    <div class="exercise-icon"><i class="fas fa-dumbbell"></i></div>
-                                    <div data-ar="سكوات، لانجز، ليغ برس، كالف ريزز" data-en="Squats, Lunges, Leg press, Calf raises">سكوات، لانجز، ليغ برس، كالف ريزز</div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td data-ar="الجمعة" data-en="Friday">الجمعة</td>
-                            <td data-ar="الأكتاف" data-en="Shoulders">الأكتاف</td>
-                            <td>
-                                <div class="exercise">
-                                    <div class="exercise-icon"><i class="fas fa-dumbbell"></i></div>
-                                    <div data-ar="ميلتري برس، لاتيرال ريز، فرونت ريز، شرج" data-en="Military press, Lateral raise, Front raise, Shrugs">ميلتري برس، لاتيرال ريز، فرونت ريز، شرج</div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <div class="schedule-content" id="fatloss">
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th data-ar="اليوم" data-en="Day">اليوم</th>
-                            <th data-ar="نوع التدريب" data-en="Training Type">نوع التدريب</th>
-                            <th data-ar="التمارين" data-en="Exercises">التمارين</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-ar="الاثنين" data-en="Monday">الاثنين</td>
-                            <td data-ar="تمارين المقاومة" data-en="Resistance Training">تمارين المقاومة</td>
-                            <td>
-                                <div class="exercise">
-                                    <div class="exercise-icon"><i class="fas fa-dumbbell"></i></div>
-                                    <div data-ar="سكوات، بنش برس، لت بلل، شولدربريس" data-en="Squats, Bench press, Lat pull, Shoulder press">سكوات، بنش برس، لت بلل، شولدربريس</div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td data-ar="الثلاثاء" data-en="Tuesday">الثلاثاء</td>
-                            <td data-ar="الكارديو" data-en="Cardio">الكارديو</td>
-                            <td>
-                                <div class="exercise">
-                                    <div class="exercise-icon"><i class="fas fa-running"></i></div>
-                                    <div data-ar="ركض، قفز الحبل، HIIT" data-en="Running, Jump rope, HIIT">ركض، قفز الحبل، HIIT</div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td data-ar="الأربعاء" data-en="Wednesday">الأربعاء</td>
-                            <td data-ar="تمارين المقاومة" data-en="Resistance Training">تمارين المقاومة</td>
-                            <td>
-                                <div class="exercise">
-                                    <div class="exercise-icon"><i class="fas fa-dumbbell"></i></div>
-                                    <div data-ar="لانجز، باربل رو، كابل فلاي، ترايسبس" data-en="Lunges, Barbell row, Cable fly, Triceps">لانجز، باربل رو، كابل فلاي، ترايسبس</div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td data-ar="الخميس" data-en="Thursday">الخميس</td>
-                            <td data-ar="الكارديو" data-en="Cardio">الكارديو</td>
-                            <td>
-                                <div class="exercise">
-                                    <div class="exercise-icon"><i class="fas fa-running"></i></div>
-                                    <div data-ar="ركض، دراجة، HIIT" data-en="Running, Cycling, HIIT">ركض، دراجة، HIIT</div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td data-ar="الجمعة" data-en="Friday">الجمعة</td>
-                            <td data-ar="تمارين المقاومة" data-en="Resistance Training">تمارين المقاومة</td>
-                            <td>
-                                <div class="exercise">
-                                    <div class="exercise-icon"><i class="fas fa-dumbbell"></i></div>
-                                    <div data-ar="سكوات، شولدربريس، كيرلز، كرانش" data-en="Squats, Shoulder press, Curls, Crunches">سكوات، شولدربريس، كيرلز، كرانش</div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <div class="schedule-content" id="fitness">
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th data-ar="اليوم" data-en="Day">اليوم</th>
-                            <th data-ar="نوع التدريب" data-en="Training Type">نوع التدريب</th>
-                            <th data-ar="التمارين" data-en="Exercises">التمارين</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-ar="الاثنين" data-en="Monday">الاثنين</td>
-                            <td data-ar="تمارين القوة" data-en="Strength Training">تمارين القوة</td>
-                            <td>
-                                <div class="exercise">
-                                    <div class="exercise-icon"><i class="fas fa-dumbbell"></i></div>
-                                    <div data-ar="سكوات، بنش برس، باربل رو" data-en="Squats, Bench press, Barbell row">سكوات، بنش برس، باربل رو</div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td data-ar="الثلاثاء" data-en="Tuesday">الثلاثاء</td>
-                            <td data-ar="الكارديو" data-en="Cardio">الكارديو</td>
-                            <td>
-                                <div class="exercise">
-                                    <div class="exercise-icon"><i class="fas fa-running"></i></div>
-                                    <div data-ar="ركض، دراجة" data-en="Running, Cycling">ركض، دراجة</div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td data-ar="الأربعاء" data-en="Wednesday">الأربعاء</td>
-                            <td data-ar="اليوغا والمرونة" data-en="Yoga & Flexibility">اليوغا والمرونة</td>
-                            <td>
-                                <div class="exercise">
-                                    <div class="exercise-icon"><i class="fas fa-spa"></i></div>
-                                    <div data-ar="تمارين إطالة، يوغا" data-en="Stretching, Yoga">تمارين إطالة، يوغا</div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td data-ar="الخميس" data-en="Thursday">الخميس</td>
-                            <td data-ar="تمارين القوة" data-en="Strength Training">تمارين القوة</td>
-                            <td>
-                                <div class="exercise">
-                                    <div class="exercise-icon"><i class="fas fa-dumbbell"></i></div>
-                                    <div data-ar="لانجز، شولدربريس، كيرلز" data-en="Lunges, Shoulder press, Curls">لانجز، شولدربريس، كيرلز</div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td data-ar="الجمعة" data-en="Friday">الجمعة</td>
-                            <td data-ar="الكارديو" data-en="Cardio">الكارديو</td>
-                            <td>
-                                <div class="exercise">
-                                    <div class="exercise-icon"><i class="fas fa-running"></i></div>
-                                    <div data-ar="سباحة، قفز الحبل" data-en="Swimming, Jump rope">سباحة، قفز الحبل</div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <section class="testimonials">
-        <div class="testimonials-container">
-            <h2 class="section-title" data-ar="آراء متدربينا" data-en="Trainees Testimonials">آراء متدربينا</h2>
-            <p class="section-subtitle" data-ar="ماذا يقولون عن تجربتهم مع برامجنا" data-en="What they say about their experience with our programs" style="text-align: center; color: var(--text-secondary); max-width: 800px; margin: 0 auto 3rem;">ماذا يقولون عن تجربتهم مع برامجنا</p>
-            
-            <div class="testimonials-slider">
-                <div class="testimonial-card fade-in">
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="عميل">
-                        </div>
-                        <div>
-                            <div class="client-name" data-ar="أحمد محمد" data-en="Ahmed Mohammed">أحمد محمد</div>
-                            <div class="client-title" data-ar="متدرب منذ 8 أشهر" data-en="Trainee for 8 months">متدرب منذ 8 أشهر</div>
-                        </div>
-                    </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text" data-ar="بفضل البرنامج المخصص والالتزام بنظام التغذية، تمكنت من زيادة كتلتي العضلية بمقدار 7 كجم خلال 6 أشهر فقط. المدرب كان متابعاً لي يومياً ويقدم النصائح القيمة." data-en="Thanks to the customized program and commitment to the nutrition system, I was able to increase my muscle mass by 7kg in just 6 months. The trainer was following up with me daily and providing valuable advice.">بفضل البرنامج المخصص والالتزام بنظام التغذية، تمكنت من زيادة كتلتي العضلية بمقدار 7 كجم خلال 6 أشهر فقط. المدرب كان متابعاً لي يومياً ويقدم النصائح القيمة.</p>
-                </div>
-                
-                <div class="testimonial-card fade-in">
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="عميل">
-                        </div>
-                        <div>
-                            <div class="client-name" data-ar="سارة عبدالله" data-en="Sarah Abdullah">سارة عبدالله</div>
-                            <div class="client-title" data-ar="متدربة منذ 5 أشهر" data-en="Trainee for 5 months">متدربة منذ 5 أشهر</div>
-                        </div>
-                    </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text" data-ar="خسرت 10 كجم من وزني مع الحفاظ على الكتلة العضلية بفضل البرنامج المتكامل. ما يميز المدرب هو اهتمامه بكل التفاصيل وتعديل البرنامج حسب تقدمي." data-en="I lost 10kg of my weight while maintaining muscle mass thanks to the integrated program. What distinguishes the trainer is his attention to every detail and adjusting the program according to my progress.">خسرت 10 كجم من وزني مع الحفاظ على الكتلة العضلية بفضل البرنامج المتكامل. ما يميز المدرب هو اهتمامه بكل التفاصيل وتعديل البرنامج حسب تقدمي.</p>
-                </div>
-                
-                <div class="testimonial-card fade-in">
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="عميل">
-                        </div>
-                        <div>
-                            <div class="client-name" data-ar="خالد سعيد" data-en="Khaled Saeed">خالد سعيد</div>
-                            <div class="client-title" data-ar="متدرب منذ سنة" data-en="Trainee for 1 year">متدرب منذ سنة</div>
-                        </div>
-                    </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p class="testimonial-text" data-ar="بعد سنوات من المحاولات الفردية، وجدت مع المدرب البرنامج المناسب لحالتي. خلال سنة من التدريب تحسنت قوتي وقدراتي البدنية بشكل ملحوظ." data-en="After years of individual attempts, I found the right program for my condition with the trainer. During a year of training, my strength and physical abilities improved significantly.">بعد سنوات من المحاولات الفردية، وجدت مع المدرب البرنامج المناسب لحالتي. خلال سنة من التدريب تحسنت قوتي وقدراتي البدنية بشكل ملحوظ.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="contact-container">
-            <h2 data-ar="تواصل مع مدربك الشخصي" data-en="Contact Your Personal Trainer">تواصل مع مدربك الشخصي</h2>
-            <p data-ar="هل لديك استفسار أو تريد بدء رحلتك التدريبية؟ تواصل معنا عبر الوسائل التالية" data-en="Do you have a question or want to start your training journey? Contact us through the following means">هل لديك استفسار أو تريد بدء رحلتك التدريبية؟ تواصل معنا عبر الوسائل التالية</p>
-            
-            <div class="social-links">
-                <a href="https://www.instagram.com/ghadirfit?igsh=MWN5ZzhkZGdyYTBoOQ==" target="_blank" class="social-btn instagram-btn" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/share/16dY7grjVm/?mibextid=wwXIfr" target="_blank" class="social-btn facebook-btn" title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://youtube.com/yourchannel" target="_blank" class="social-btn youtube-btn" title="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://tiktok.com/@yourusername" target="_blank" class="social-btn tiktok-btn" title="TikTok">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-            </div>
-            
-            <div class="contact-form fade-in">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="اسمك" required data-ar-placeholder="اسمك" data-en-placeholder="Your Name">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="بريدك الإلكتروني" required data-ar-placeholder="بريدك الإلكتروني" data-en-placeholder="Your Email">
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" class="form-control" placeholder="رقم هاتفك" required data-ar-placeholder="رقم هاتفك" data-en-placeholder="Your Phone">
-                    </div>
-                    <div class="form-group">
-                        <select class="form-control" required data-ar-placeholder="اختر البرنامج" data-en-placeholder="Select Program">
-                            <option value="" disabled selected data-ar="اختر البرنامج" data-en="Select Program">اختر البرنامج</option>
-                            <option value="premium" data-ar="البرنامج المتميز" data-en="Premium Program">البرنامج المتميز</option>
-                            <option value="muscle" data-ar="بناء العضلات" data-en="Muscle Building">بناء العضلات</option>
-                            <option value="fatloss" data-ar="فقدان الدهون" data-en="Fat Loss">فقدان الدهون</option>
-                            <option value="other" data-ar="استفسار عام" data-en="General Inquiry">استفسار عام</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" placeholder="رسالتك" required data-ar-placeholder="رسالتك" data-en-placeholder="Your Message"></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i> <span data-ar="إرسال الرسالة" data-en="Send Message">إرسال الرسالة</span>
-                    </button>
-                </form>
-            </div>
-            
-            <a href="https://wa.me/9613241422?text=مرحباً، أريد الاستفسار عن برامج التدريب" class="whatsapp-btn" style="font-size: 1.3rem; padding: 1.2rem 2.5rem; margin-top: 2rem;">
-                <i class="fab fa-whatsapp"></i> <span data-ar="تواصل عبر الواتساب" data-en="Contact via WhatsApp">تواصل عبر الواتساب</span>
-            </a>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-about">
-                <div class="footer-logo" data-ar="مدرب كمال الأجسام" data-en="Bodybuilding Trainer">مدرب كمال الأجسام</div>
-                <p data-ar="نساعدك في تحقيق أحلامك الجسدية من خلال برامج تدريبية وتغذوية مخصصة تحت إشراف مدربين محترفين." data-en="We help you achieve your body goals through customized training and nutrition programs under the supervision of professional trainers.">نساعدك في تحقيق أحلامك الجسدية من خلال برامج تدريبية وتغذوية مخصصة تحت إشراف مدربين محترفين.</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/ghadirfit?igsh=MWN5ZzhkZGdyYTBoOQ==" class="social-btn instagram-btn"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/share/16dY7grjVm/?mibextid=wwXIfr" class="social-btn facebook-btn"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-btn youtube-btn"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-links">
-                <h3 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h3>
-                <ul>
-                    <li><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
-                    <li><a href="#programs" data-ar="البرامج" data-en="Programs">البرامج</a></li>
-                    <li><a href="#about" data-ar="عن المدرب" data-en="About Trainer">عن المدرب</a></li>
-                    <li><a href="#results" data-ar="النتائج" data-en="Results">النتائج</a></li>
-                    <li><a href="#contact" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-contact">
-                <h3 data-ar="معلومات الاتصال" data-en="Contact Info">معلومات الاتصال</h3>
-                <div class="contact-info">
-                    <i class="fas fa-phone-alt"></i>
-                    <span data-ar="+966 50 123 4567" data-en="+966 50 123 4567">+961 3 241 422</span>
-                </div>
-                <div class="contact-info">
-                    <i class="fas fa-envelope"></i>
-                    <span data-ar="info@trainer.com" data-en="info@trainer.com">Ghadi_5555@outlook.com</span>
-                </div>
-                <div class="contact-info">
-                    <i class="fas fa-map-marker-alt"></i>
-                       <span data-ar=" لبنان ،طرابلس data-en=" data-en="lebanon,tripoli"> لبنان ،طرابلس</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="copyright">
-            <p data-ar="&copy; 2023 مدرب كمال الأجسام. جميع الحقوق محفوظة." data-en="&copy; 2023 Bodybuilding Trainer. All Rights Reserved.">&copy; 2023 مدرب كمال الأجسام. جميع الحقوق محفوظة.</p>
-        </div>
-    </footer>
-
     <script>
-        // Language switching functionality
         let currentLang = 'ar';
-        
-        function switchLanguage() {
-            currentLang = currentLang === 'ar' ? 'en' : 'ar';
-            const elements = document.querySelectorAll('[data-ar][data-en]');
-            
-            elements.forEach(element => {
-                if (element.hasAttribute('data-ar-placeholder')) {
-                    element.placeholder = element.getAttribute(`data-${currentLang}-placeholder`);
-                } else {
-                    element.textContent = element.getAttribute(`data-${currentLang}`);
-                }
-            });
-            
-            // Update HTML direction and language
-            document.documentElement.lang = currentLang;
-            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-            
-            // Update page title
-            document.title = currentLang === 'ar' ? 'محترف كمال الأجسام | مدرب شخصي معتمد' : 'Professional Bodybuilding Trainer | Certified Coach';
-        }
 
-        // Create floating particles
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 30;
+        function toggleLanguage() {
+            const arTexts = document.querySelectorAll('.ar-text');
+            const enTexts = document.querySelectorAll('.en-text');
+            const html = document.documentElement;
 
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.width = (Math.random() * 6 + 4) + 'px';
-                particle.style.height = particle.style.width;
-                particle.style.animationDelay = Math.random() * 8 + 's';
-                particle.style.animationDuration = (Math.random() * 5 + 5) + 's';
-                particle.style.opacity = Math.random() * 0.5 + 0.3;
-                particlesContainer.appendChild(particle);
-            }
-        }
-
-        // Mobile menu functionality
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const closeMenu = document.getElementById('closeMenu');
-        const overlay = document.getElementById('overlay');
-        
-        mobileMenuBtn.addEventListener('click', function() {
-            mobileMenu.classList.add('active');
-            overlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-        
-        closeMenu.addEventListener('click', function() {
-            mobileMenu.classList.remove('active');
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-        
-        overlay.addEventListener('click', function() {
-            mobileMenu.classList.remove('active');
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-
-        // Schedule tabs functionality
-        const scheduleTabs = document.querySelectorAll('.schedule-tab');
-        
-        scheduleTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                const target = this.getAttribute('data-target');
-                
-                // Remove active class from all tabs and contents
-                document.querySelectorAll('.schedule-tab').forEach(t => t.classList.remove('active'));
-                document.querySelectorAll('.schedule-content').forEach(c => c.classList.remove('active'));
-                
-                // Add active class to clicked tab and corresponding content
-                this.classList.add('active');
-                document.getElementById(target).classList.add('active');
-            });
-        });
-
-        // Header scroll effect
-        const header = document.getElementById('header');
-        
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
+            if (currentLang === 'ar') {
+                // Switch to English
+                arTexts.forEach(el => el.classList.add('hidden'));
+                enTexts.forEach(el => el.classList.remove('hidden'));
+                html.setAttribute('lang', 'en');
+                html.setAttribute('dir', 'ltr');
+                currentLang = 'en';
             } else {
-                header.classList.remove('scrolled');
+                // Switch to Arabic
+                enTexts.forEach(el => el.classList.add('hidden'));
+                arTexts.forEach(el => el.classList.remove('hidden'));
+                html.setAttribute('lang', 'ar');
+                html.setAttribute('dir', 'rtl');
+                currentLang = 'ar';
             }
-        });
-
-        // Scroll to sections
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    mobileMenu.classList.remove('active');
-                    overlay.classList.remove('active');
-                    document.body.style.overflow = '';
-                }
-            });
-        });
-
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
-        
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Here you would normally send the form data to a server
-                alert(currentLang === 'ar' ? 'تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.' : 'Your message has been sent successfully! We will contact you soon.');
-                this.reset();
-            });
         }
 
-        // Scroll animation
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        function checkScroll() {
-            fadeElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('visible');
+        function openWhatsApp(type) {
+            const phoneNumber = '+9613241422';
+            let message = '';
+
+            if (currentLang === 'ar') {
+                switch(type) {
+                    case 'consultation':
+                        message = 'مرحباً، أريد استشارة مجانية';
+                        break;
+                    case 'free':
+                        message = 'مرحباً، أريد البرنامج المجاني';
+                        break;
+                    case 'program':
+                        message = 'مرحباً، أريد الاشتراك في برنامج التدريب (4 أسابيع)';
+                        break;
+                    case 'nutrition':
+                        message = 'مرحباً، أريد خطة التغذية المخصصة';
+                        break;
+                    case 'private':
+                        message = 'مرحباً، أريد التدريب الشخصي الخاص';
+                        break;
+                    default:
+                        message = 'مرحباً، أريد بدء رحلة التحول مع المدرب غدير';
                 }
-            });
-        }
-        
-        // Initial check
-        checkScroll();
-        
-        // Check on scroll
-        window.addEventListener('scroll', checkScroll);
-
-        // Counter animation for stats
-        function animateCounters() {
-            const counters = document.querySelectorAll('.stat-number');
-            const speed = 200;
-            
-            counters.forEach(counter => {
-                const target = parseInt(counter.textContent.replace(/\D/g, ''));
-                let current = 0;
-                const increment = target / speed;
-                const suffix = counter.textContent.replace(/\d/g, '');
-                
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        current = target;
-                        clearInterval(timer);
-                    }
-                    counter.textContent = Math.floor(current) + suffix;
-                }, 10);
-            });
-        }
-
-        // Trigger counter animation when stats section is visible
-        const statsObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    statsObserver.unobserve(entry.target);
+            } else {
+                switch(type) {
+                    case 'consultation':
+                        message = 'Hello, I want a free consultation';
+                        break;
+                    case 'free':
+                        message = 'Hello, I want the free program';
+                        break;
+                    case 'program':
+                        message = 'Hello, I want to subscribe to the 4-week training program';
+                        break;
+                    case 'nutrition':
+                        message = 'Hello, I want the custom nutrition plan';
+                        break;
+                    case 'private':
+                        message = 'Hello, I want personalized private training';
+                        break;
+                    default:
+                        message = 'Hello, I want to start my transformation journey with Coach Ghadir';
                 }
-            });
-        }, { threshold: 0.5 });
+            }
 
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Add smooth scrolling and animation effects
         document.addEventListener('DOMContentLoaded', function() {
-            // Create particles
-            createParticles();
-            
-            // Observe stats section
-            const statsSection = document.querySelector('.stats-section');
-            if (statsSection) {
-                statsObserver.observe(statsSection);
-            }
-            
-            // Set initial language for placeholders
-            if (currentLang === 'en') {
-                switchLanguage();
-            }
+            // Animate elements on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            });
+
+            document.querySelectorAll('.program-item').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Add ripple effect on button clicks
+            document.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.cssText = `
+                        position: absolute;
+                        width: ${size}px;
+                        height: ${size}px;
+                        left: ${x}px;
+                        top: ${y}px;
+                        background: rgba(255,255,255,0.3);
+                        border-radius: 50%;
+                        transform: scale(0);
+                        animation: ripple 0.6s ease-out;
+                        pointer-events: none;
+                    `;
+                    
+                    this.style.position = 'relative';
+                    this.style.overflow = 'hidden';
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => ripple.remove(), 600);
+                });
+            });
         });
+
+        // Add CSS for ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
